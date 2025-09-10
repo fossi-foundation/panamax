@@ -433,11 +433,11 @@ module panamax (
 	inout wire	sio_amuxbus_a,
 	input wire	sio_vreg_en_refgen,
 	input wire	sio_ibuf_sel_refgen,
-	input wire	sio_vohref,
+	inout wire	sio_vohref,
 	input wire	sio_hld_h_n_refgen,
 	input wire	sio_vtrip_sel_refgen,
-	input wire	[1:0]	sio_pad_a_esd_0_h,
-	input wire	[1:0]	sio_pad_a_noesd_h,
+	inout wire	[1:0]	sio_pad_a_esd_0_h,
+	inout wire	[1:0]	sio_pad_a_noesd_h,
 	input wire	[1:0]	sio_inp_dis,
 	output wire	[1:0]	sio_tie_lo_esd,
 	input wire	[1:0]	sio_out,
@@ -6887,8 +6887,8 @@ module panamax (
 	.PRODUCT_ID(PRODUCT_ID)
     ) product_id_rom_8bit_0 (
     `ifdef USE_POWER_PINS
-	.VPWR(vccd),
-	.VGND(vssd),
+	.VPWR(vccd0),
+	.VGND(vssd0),
     `endif
 	.product_id(product_id)
     );
@@ -6898,8 +6898,8 @@ module panamax (
 	.PROJECT_ID(PROJECT_ID)
     ) project_id_rom_32bit_0 (
     `ifdef USE_POWER_PINS
-	.VPWR(vccd),
-	.VGND(vssd),
+	.VPWR(vccd0),
+	.VGND(vssd0),
     `endif
 	.project_id(project_id)
     );
