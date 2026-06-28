@@ -429,8 +429,8 @@ module panamax (
 	input wire	[2:0]	sio_voh_sel,
 	inout wire	amuxbus_a_n,
 	inout wire	amuxbus_b_n,
-	inout wire	sio_amuxbus_b,
-	inout wire	sio_amuxbus_a,
+	inout wire	amuxbus_b_s,
+	inout wire	amuxbus_a_s,
 	input wire	sio_vreg_en_refgen,
 	input wire	sio_ibuf_sel_refgen,
 	input wire	sio_vohref,
@@ -2216,8 +2216,6 @@ module panamax (
 	wire amuxbus_b_e;
 	wire amuxbus_a_w;
 	wire amuxbus_b_w;
-	wire amuxbus_a_s;
-	wire amuxbus_b_s;
 
 	wire vddio_q;
 	wire vssio_q;
@@ -3135,7 +3133,7 @@ module panamax (
 	.ANALOG_POL(gpio6_2_analog_pol),
 	.DM(gpio6_2_dm),
 	.IB_MODE_SEL(gpio6_2_ib_mode_sel),
-	.VINREF(vref_e_vinref),
+	.VINREF(vref_w_vinref),
 	.VDDIO(vddio),
 	.VDDIO_Q(vddio_q),
 	.VDDA(vdda2),
@@ -6887,8 +6885,8 @@ module panamax (
 	.PRODUCT_ID(PRODUCT_ID)
     ) product_id_rom_8bit_0 (
     `ifdef USE_POWER_PINS
-	.VPWR(vccd),
-	.VGND(vssd),
+	.VPWR(vccd0),
+	.VGND(vssd0),
     `endif
 	.product_id(product_id)
     );
@@ -6898,8 +6896,8 @@ module panamax (
 	.PROJECT_ID(PROJECT_ID)
     ) project_id_rom_32bit_0 (
     `ifdef USE_POWER_PINS
-	.VPWR(vccd),
-	.VGND(vssd),
+	.VPWR(vccd0),
+	.VGND(vssd0),
     `endif
 	.project_id(project_id)
     );

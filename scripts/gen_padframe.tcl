@@ -1495,7 +1495,7 @@ box grow s 1.5um
 box grow e 0.045um
 paint m2
 box grow s -1.5um
-label sio_amuxbus_b FreeSans 0.2um 90 0 0 c m2
+label amuxbus_b_s FreeSans 0.2um 90 0 0 c m2
 port make
 port use analog
 port class inout
@@ -1503,7 +1503,7 @@ box grow s 1.5um
 box move e 0.75um
 paint m2
 box grow s -1.5um
-label sio_amuxbus_a FreeSans 0.2um 90 0 0 c m2
+label amuxbus_a_s FreeSans 0.2um 90 0 0 c m2
 port make
 port use analog
 port class inout

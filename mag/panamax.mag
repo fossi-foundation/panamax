@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1746736290
+timestamp 1779727999
 << checkpaint >>
 rect -352380 1001282 -327322 1008206
 rect -1260 998860 718860 1038860
@@ -1243,14 +1243,14 @@ rect 542232 35444 542260 35514
 rect 548588 35460 548644 40846
 rect 541736 35416 542260 35444
 rect 543778 35404 548644 35460
-rect 548772 35404 548828 40846
-rect 542924 35196 548820 35224
+rect 548772 35224 548828 40846
+rect 542924 35196 548828 35224
 rect 542924 35076 542952 35196
 rect 548956 35092 549012 40846
 rect 541728 35048 542952 35076
 rect 543778 35036 549012 35092
-rect 549140 35036 549196 40846
-rect 542754 34862 549192 34890
+rect 549140 34890 549196 40846
+rect 542754 34862 549196 34890
 rect 542754 34800 542782 34862
 rect 549324 34816 549380 40846
 rect 570180 39162 570236 40812
@@ -5122,7 +5122,7 @@ timestamp 1738263620
 transform 0 -1 39593 1 0 964000
 box 0 0 4000 39593
 use sky130_ef_io__connect_vcchib_vccd_and_vswitch_vddio_slice_20um  sky130_ef_io__connect_vcchib_vccd_and_vswitch_vddio_slice_20um_0 $PDKPATH/libs.ref/sky130_fd_io/mag
-timestamp 1738263620
+timestamp 1778081219
 transform -1 0 552000 0 -1 39593
 box 0 0 4000 39593
 use sky130_ef_io__disconnect_vdda_slice_5um  sky130_ef_io__disconnect_vdda_slice_5um_0 $PDKPATH/libs.ref/sky130_fd_io/mag
@@ -6390,9 +6390,9 @@ flabel metal2 s 368752 996600 368880 996900 0 FreeSans 320 90 0 0 amuxbus_a_n
 port 460 nsew signal bidirectional
 flabel metal2 s 368496 996600 368624 996900 0 FreeSans 320 90 0 0 amuxbus_b_n
 port 461 nsew signal bidirectional
-flabel metal2 s 580217 51043 580269 51343 0 FreeSans 320 90 0 0 sio_amuxbus_b
+flabel metal2 s 580217 51043 580269 51343 0 FreeSans 320 90 0 0 amuxbus_b_s
 port 462 nsew analog bidirectional
-flabel metal2 s 580367 51043 580419 51343 0 FreeSans 320 90 0 0 sio_amuxbus_a
+flabel metal2 s 580367 51043 580419 51343 0 FreeSans 320 90 0 0 amuxbus_a_s
 port 463 nsew analog bidirectional
 flabel metal2 s 580980 51043 581032 51343 0 FreeSans 320 90 0 0 sio_vreg_en_refgen
 port 464 nsew signal input

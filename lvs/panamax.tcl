@@ -30,11 +30,17 @@ set circuit1 [readnet spice ../netlist/layout/panamax.spice]
 # This forces the verilog to be treated as case-insensitive, since the
 # SPICE files attached to the netlist will be case-insensitive.
 set circuit2 [readnet spice /dev/null]
+readnet verilog ../verilog/rtl/lvs_defs.v $circuit2
 readnet verilog ../verilog/rtl/panamax.v $circuit2
 
 # Read base libraries
 readnet spice ${PDK_PATH}/${PDK}/libs.ref/sky130_fd_io/spice/sky130_fd_io.spice $circuit2
 # readnet spice ${PDK_PATH}/${PDK}/libs.ref/sky130_fd_io/spice/sky130_ef_io_analog.spice $circuit2
 readnet spice ${PDK_PATH}/${PDK}/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice $circuit2
+
+# These properties are used when reading in subcircuits using them but are not relevant afterward
+# and will cause property errors in LVS if they are not removed.
+property "$circuit2 product_id_rom_8bit" delete PRODUCT_ID
+property "$circuit2 project_id_rom_32bit" delete PROJECT_ID
 
 lvs "$circuit1 panamax" "$circuit2 panamax" ${PDK_PATH}/${PDK}/libs.tech/netgen/sky130A_setup.tcl panamax_comp.out

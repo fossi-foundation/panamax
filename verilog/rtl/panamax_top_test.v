@@ -2192,8 +2192,8 @@ module panamax_top_test();
     wire select_tie_lo_esd;
     wire select_vtrip_sel;
     wire select_zero;
-    wire sio_amuxbus_a;
-    wire sio_amuxbus_b;
+    wire amuxbus_a_s;
+    wire amuxbus_b_s;
     wire sio_dft_refgen;
     wire sio_enable_h;
     wire sio_enable_vdda_h;
@@ -4329,8 +4329,8 @@ module panamax_top_test();
         .select_zero(select_zero),
         .sio0(sio0),
         .sio1(sio1),
-        .sio_amuxbus_a(sio_amuxbus_a),
-        .sio_amuxbus_b(sio_amuxbus_b),
+        .amuxbus_a_s(amuxbus_a_s),
+        .amuxbus_b_s(amuxbus_b_s),
         .sio_dft_refgen(sio_dft_refgen),
         .sio_dm0(sio_dm0),
         .sio_dm1(sio_dm1),

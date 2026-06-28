@@ -4849,12 +4849,12 @@ PINS 2526 ;
      + USE SIGNAL
      + PORT
         + LAYER met2 ( -128 -300 ) ( 128 300 )        + PLACED ( 737120 1993500 ) N ;
-   - sio_amuxbus_b + NET sio_amuxbus_b
+   - amuxbus_b_s + NET amuxbus_b_s
      + DIRECTION INOUT
      + USE ANALOG
      + PORT
         + LAYER met2 ( -52 -300 ) ( 52 300 )        + PLACED ( 1160486 102386 ) N ;
-   - sio_amuxbus_a + NET sio_amuxbus_a
+   - amuxbus_a_s + NET amuxbus_a_s
      + DIRECTION INOUT
      + USE ANALOG
      + PORT
@@ -15630,10 +15630,10 @@ NETS 4576 ;
       + ROUTED met2 TAPERRULE met2_width_112  ( 1097600 70864 ) ( * 81636 ) ;
    - gpio8_5_dm[1] ( PIN gpio8_5_dm[1] )
       + ROUTED met2 TAPERRULE met2_width_104  ( 823214 79574 ) ( * 81768 ) ;
-   - sio_amuxbus_a ( PIN sio_amuxbus_a ) ( muxsplit_sw amuxbus_a_l )
+   - amuxbus_a_s ( PIN amuxbus_a_s ) ( muxsplit_sw amuxbus_a_l )
        ( muxsplit_se amuxbus_a_r )
       + ROUTED met2 TAPERRULE met2_width_104  ( 1160786 101538 ) ( * 102634 ) ;
-   - sio_amuxbus_b ( PIN sio_amuxbus_b ) ( muxsplit_sw amuxbus_b_l )
+   - amuxbus_b_s ( PIN amuxbus_b_s ) ( muxsplit_sw amuxbus_b_l )
        ( muxsplit_se amuxbus_b_r )
       + ROUTED met2 TAPERRULE met2_width_104  ( 1160486 101538 ) ( * 102634 ) ;
    - sky130_ef_io__com_bus_slice_5um_22/VCCD
